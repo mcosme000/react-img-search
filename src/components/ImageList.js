@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ImageList = () => {
+const ImageList = ({data}) => {
   return(
     <div>
-      <p>ImageList</p>
+      <p>{data}</p>
     </div>
   )
 }

@@ -1,9 +1,19 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ onClick }) => {
+
+  const getInput = (e) => {
+    e.preventDefault();
+    
+    onClick();
+  }
+
   return(
     <div>
-      <p>SearchBar</p>
+      <form>
+        <input type="text" id="input"/>
+        <button onClick={getInput}>Search images</button>
+      </form>
     </div>
   )
 }
