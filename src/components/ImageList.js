@@ -1,9 +1,19 @@
 import React from 'react';
+import ImageShow from './ImageShow';
 
-const ImageList = ({data}) => {
+const ImageList = ({images}) => {
+  const imageElement = images.map(img => {
+    return(
+      <ImageShow
+        url={img.src.medium}
+        alt={img.alt}
+        photographer={img.photographer}
+        key={img.id}/>
+    )
+  })
   return(
-    <div>
-      <p>{data}</p>
+    <div className="gallery">
+      {imageElement}
     </div>
   )
 }
