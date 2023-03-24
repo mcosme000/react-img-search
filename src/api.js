@@ -1,5 +1,5 @@
-const SearchImages = async () => {
-  const response = await fetch(`https://api.pexels.com/v1/search?query=ocean`, {
+const SearchImages = async (input) => {
+  const response = await fetch(`https://api.pexels.com/v1/search?query=${input}`, {
     headers: {
       "Authorization": "AZprDpV9tT2OGZaZ8nrsUJmHpt1bdC8VpkhTDP9hJrm9OQ17PeIf3SI9"
     }
@@ -7,7 +7,7 @@ const SearchImages = async () => {
   .then(response => {
     return response.json();
   })
-  .then(data => console.log(data))
+  .then(data => data)
 
   return response;
 }

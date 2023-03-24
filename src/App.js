@@ -1,16 +1,17 @@
 import React from 'react';
 import SearchBar from './components/SearchBar';
-
+import SearchImages from './api'
 
 const App = () => {
 
-  const handleInput = (input) => {
-    console.log(`Listening to... ${input}`)
+  const handleInput = async (input) => {
+    const result = await SearchImages(input)
+    console.log(result)
   }
 
   return(
     <div className="app">
-      <SearchBar onClick={handleInput}/>
+      <SearchBar onSubmit={handleInput}/>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ onClick }) => {
+const SearchBar = ({ onSubmit }) => {
   const [ input, setInput ] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onClick(input);
+    onSubmit(input);
   }
 
   const handleChange = (e) => {
