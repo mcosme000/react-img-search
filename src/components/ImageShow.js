@@ -1,11 +1,17 @@
 import React from 'react';
 
-const ImageShow = ({url, alt, photographer}) => {
+const ImageShow = ({url, img_url, alt, photographer}) => {
   return(
-    <div>
-      <p>{photographer}</p>
-      <img src={url} alt={alt}/>
-    </div>
+    <a href={url} target="_blank" rel="noreferrer">
+      <div className="image">
+        <div className="img-container">
+          <img src={img_url} alt={alt}/>
+        </div>
+        <div className="overlay">
+          <p className="photographer">{photographer}</p>
+        </div>
+      </div>
+    </a>
   )
 }
 

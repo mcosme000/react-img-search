@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../stylesheets/searchbar.css';
+
 
 const SearchBar = ({ onSubmit }) => {
   const [ input, setInput ] = useState("")
