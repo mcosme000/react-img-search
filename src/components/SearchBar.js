@@ -18,7 +18,8 @@ const SearchBar = ({ onSubmit }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input type="text" id="input" onChange={handleChange}/>
-        <input type="submit" value="Search Images"/>
+        <input type="submit" value="Search"/>
+
       </form>
     </div>
   )

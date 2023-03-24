@@ -1,10 +1,32 @@
-form {
-  padding: 20px;
+header {
   width: 100%;
+  background: #fff;
+  padding: 20px;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border: 0.1px solid #000;
+  border-radius: 2px;
+
 }
 
 form input[type="text"] {
+  flex-grow: 1;
   padding: 10px;
-  background: gainsboro;
+  background: #fff;
   border: none;
+  border-radius: 2px;
+  font-family: 'Nunito', sans-serif;
+}
+
+form input[type="submit"] {
+  border: none;
+  background: rgb(46, 97, 199);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 0 2px 2px 0;
+  font-family: 'Nunito', sans-serif;
 }

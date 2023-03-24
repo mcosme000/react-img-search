@@ -16,7 +16,9 @@ const App = () => {
 
   return(
     <div className="app">
-      <SearchBar onSubmit={handleInput}/>
+      <header>
+        <SearchBar onSubmit={handleInput}/>
+      </header>
       <ImageList images={images}/>
     </div>
   )
