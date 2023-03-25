@@ -10,14 +10,9 @@
   position: relative;
 }
 
-.small-gallery .image:hover .overlay {
-  opacity: 1;
-}
-
 .small-gallery .img-container {
   width: 100%;
   height: 200px;
-  background: grey;
 }
 
 .small-gallery img {
@@ -28,6 +23,9 @@
   margin-bottom: 10px;
 }
 
+.small-gallery .image:hover .overlay {
+  opacity: 1;
+}
 
 /* wide gallery */
 
@@ -35,6 +33,11 @@
   padding: 30px;
   columns: 3 200px;
   column-gap: 10px;
+}
+
+.wide-gallery .image {
+  border-radius: 5px;
+  position: relative;
 }
 
 .wide-gallery .img-container {
@@ -46,6 +49,12 @@
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.wide-gallery .image:hover .overlay {
+  opacity: 1;
 }
 
 /* OVERLAY STYLES */
