@@ -7,6 +7,7 @@ import ImageList from './components/ImageList';
 
 const App = () => {
   const [images, setImages] = useState([])
+  const [grid, setGrid] = useState("small");
 
   const handleInput = async (input) => {
     const result = await SearchImages(input)
@@ -14,12 +15,17 @@ const App = () => {
     setImages(result.photos)
   }
 
+  const handleGridStyle = (style) => {
+    setGrid(style)
+    console.log(style)
+  }
+
   return(
     <div className="app">
       <header>
-        <SearchBar onSubmit={handleInput}/>
+        <SearchBar onSubmit={handleInput} onClick={handleGridStyle}/>
       </header>
-      <ImageList images={images}/>
+      <ImageList images={images} gridStyle={grid}/>
     </div>
   )
 }

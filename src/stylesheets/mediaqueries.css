@@ -1,24 +1,24 @@
 /* media queries */
 @media(max-width: 992px) {
-  .gallery {
+  .small-gallery {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media(max-width: 850px) {
-  .gallery {
+  .small-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media(max-width: 600px) {
-  .gallery {
+  .small-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media(max-width: 380px) {
-  .gallery {
+  .small-gallery {
     grid-template-columns: 1fr;
   }
 }
