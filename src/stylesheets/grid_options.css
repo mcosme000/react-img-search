@@ -1,0 +1,13 @@
+/* options list styles */
+.options {
+  display: flex;
+}
+
+.options img {
+  width: 40px;
+  margin-left: 15px;
+}
+
+.options img:hover {
+  cursor: pointer;
+}

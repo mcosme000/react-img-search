@@ -7,6 +7,7 @@ header {
 .header-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 form {
@@ -16,6 +17,7 @@ form {
   border: 0.1px solid #000;
   border-radius: 2px;
   margin-right: 20px;
+
 }
 
 form input[type="text"] {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../stylesheets/searchbar.css';
-
+import '../stylesheets/grid_options.css';
 
 const SearchBar = ({ onSubmit, onClick }) => {
   const [ input, setInput ] = useState("")
@@ -15,9 +15,9 @@ const SearchBar = ({ onSubmit, onClick }) => {
   }
 
   const handleClick = (e) => {
-    let gridClass = e.target.innerHTML.split(" ")[0].toLowerCase();
-    console.log(gridClass);
-    onClick(gridClass);
+    console.log(e.target.id)
+    let gridClass = e.target.id
+    onClick(gridClass)
   }
 
   return(
@@ -28,8 +28,10 @@ const SearchBar = ({ onSubmit, onClick }) => {
       </form>
       <div>
         <ul className="options">
-          <li onClick={handleClick}>Small grid</li>
-          <li onClick={handleClick}>Wide grid</li>
+          <img onClick={handleClick} id="small"
+            src={require('../media/small-grid.png')} alt="small logo icon"/>
+          <img onClick={handleClick} id="wide"
+            src={require('../media/wide-grid.png')} alt="wide logo icon"/>
         </ul>
       </div>
     </div>
