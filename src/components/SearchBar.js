@@ -15,7 +15,6 @@ const SearchBar = ({ onSubmit, onClick }) => {
   }
 
   const handleClick = (e) => {
-    console.log(e.target.id)
     let gridClass = e.target.id
     onClick(gridClass)
   }
